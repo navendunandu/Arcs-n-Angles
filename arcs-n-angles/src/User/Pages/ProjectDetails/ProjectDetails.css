@@ -1,0 +1,131 @@
+.project_category{
+    color: var(--orange);
+}
+
+.project_title{
+    display: flex;
+    align-items: center;
+    text-transform: capitalize !important;
+}
+
+.project_seperator{
+    display: flex;
+    align-items: center;
+    color: #767676;
+    padding: 0px 2px;
+}
+
+.project_capitalize{
+    text-transform: capitalize;
+}
+
+.project_section{
+    display: flex;
+    flex-direction: column !important;
+}
+
+.project_icons{
+    margin: 0 1rem;
+}
+
+.project_location{
+    display: flex;
+    align-items: center;
+}
+
+.project_place{
+    display: flex;
+    flex-direction: row;
+}
+
+.project_city{
+    display: flex;
+    flex-direction: row;
+}
+
+.project_locationname{
+    display: flex;
+    flex-direction: column !important;
+    color: #767676 !important;
+}
+
+.project_image{
+    display: flex;
+    justify-content: center;
+}
+
+.project_buttons{
+    display: flex;
+    justify-content: end;
+}
+.project_button{
+    gap:.5rem;
+}
+
+.btn_add{
+    color: rgb(59, 59, 191) !important;
+    background-color: white !important;
+}
+
+.btn_add:hover{
+    background-color: rgb(209, 209, 255) !important;
+}
+
+.btn_dlt{
+    color: rgb(199, 1, 1)  !important;
+    background-color: white !important;
+}
+
+.btn_dlt:hover{
+    background-color: rgb(255, 171, 171) !important;
+}
+
+.btn_edit{
+    color: var(--orange) !important;
+    background-color: white !important;
+}
+
+.btn_edit:hover{
+    background-color: rgb(253, 255, 158) !important;
+}
+
+.editproject_modal{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    background-color: white;
+    border: 2px solid var(--orange);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.modal_form{
+    display: flex;
+    flex-direction: column;
+}
+
+.btn_upd_project{
+    gap: 1rem;
+}
+
+.project_gallery{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+    justify-content: center;
+}
+
+.projectgallery_images{
+    height:80px;
+    width:80px;
+}
+
+.project_frontphoto{
+    width: 750px;
+}

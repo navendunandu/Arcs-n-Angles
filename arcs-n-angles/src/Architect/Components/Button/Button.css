@@ -1,0 +1,73 @@
+.custom_btn{
+    background-color: var(--main-color) !important;
+    font-size: 14px !important;
+    font-weight: 500px !important;
+    border: 0 !important;
+    border-radius: 50px !important;
+    padding: 1px 12px !important;
+    line-height: 35px !important;
+    min-width: 100px;
+    outline: none;
+}
+
+.custom_btn .btn_icon_container{
+    color: #000  !important;
+    background: #fff  !important;
+    border-radius: 50px !important;
+    height: 27px !important;
+    width: 27px;
+    line-height: 29px !important;
+    text-align: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.custom_btn .btn_icon_container> .MuiSvgIcon-root{
+    font-size: 16px !important;
+}
+
+.custom_btn .btn_text{
+    font-size: 14px !important;
+    text-transform: none !important;
+    text-align: center !important;
+    width: 100%;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+/* Nav Button */
+
+.custom_navbtn{
+    margin-left: .5rem !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    border: 0 !important;
+    border-top-left-radius: 6px !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-left-radius: 6px !important;
+    border-bottom-right-radius: 0px !important;
+    min-width: 100px;
+    outline: none;
+    width: 100%;
+    transition: ease 0.5s;
+}
+
+.custom_navbtn:hover{
+    background-color: var(--main-color) !important;
+    color: rgb(255, 255, 255);
+}
+
+.custom_navbtn .navbtn_icon_container> .MuiSvgIcon-root{
+    font-size: 25px !important;
+}
+
+.custom_navbtn .navbtn_text{
+    font-size: 15px !important;
+    text-transform: none !important;
+    width: 100%;
+    margin-right: 5px !important;
+    margin-left: 15px;
+    text-align: left !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}

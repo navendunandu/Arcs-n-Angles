@@ -1,0 +1,14 @@
+.archbar{
+    display: flex !important ;
+    justify-content: space-between !important;
+    width: 100% !important;
+    align-items: center !important;
+}
+
+.arch_new_button{
+    color: black !important;
+}
+
+.arch_new_button:hover{
+    background-color: rgb(255 241 197) !important;
+}

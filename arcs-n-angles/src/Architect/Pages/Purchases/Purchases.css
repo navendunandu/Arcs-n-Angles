@@ -1,0 +1,29 @@
+.purchase_card{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.purchase_btn{
+    color: #e0ad02 !important;
+}
+
+.purchase_btn:hover{
+    background-color: rgb(255 197 0 / 8%) !important;
+}
+
+.card_card{
+    display: flex;
+    justify-content: space-between;
+}
+
+.purchased_icon{
+    color: green;
+    font-size: 1.3rem !important;
+    margin-right: 0.3rem;
+}
+
+.cancelled_icon{
+    color: red;
+    font-size: 1.3rem !important;
+    margin-right: 0.3rem;
+}

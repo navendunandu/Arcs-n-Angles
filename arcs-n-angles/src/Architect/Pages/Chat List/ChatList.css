@@ -1,0 +1,78 @@
+.chatlist_card{
+    margin: .5rem 0;
+}
+
+.chatlist_content{
+    display: flex;
+    gap: .7rem;
+}
+
+.chatlist_name{
+    display: flex;
+    align-items: center;
+}
+
+.chatlist_link{
+    text-decoration: none !important;
+    color: black !important;
+}
+
+.chatlist_msg{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    gap: .2rem;
+    color: rgb(109, 109, 109);
+}
+
+.chatlist_msgname{
+    font-weight: 500 !important;
+    font-size: 1.1rem !important;
+}
+
+.chat_sendbox{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.chat_recievebox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.chat_time{
+    font-size: .7rem !important;
+    color: rgb(145, 145, 145);
+}
+
+.chat_upload{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 200px;
+    background-color: #ffffffe6;
+    border-radius: .5rem;
+    box-shadow: 0px 11px 15px -7px rgba(0,0,0,0.2), 0px 24px 38px 3px rgba(0,0,0,0.14), 0px 9px 46px 8px rgba(0,0,0,0.12);
+    padding: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.uploadbtn{
+    background-color: #ffc500 !important;
+    color: black !important;
+}
+
+.btnact{
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}

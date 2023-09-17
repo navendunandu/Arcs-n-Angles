@@ -1,0 +1,10 @@
+.newproject_grid{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.newproject_button{
+    display: flex;
+    
+}

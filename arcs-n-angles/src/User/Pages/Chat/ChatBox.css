@@ -1,0 +1,153 @@
+.chat_container {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    min-height: inherit;
+    max-height: 430px;
+  }
+
+  .chat_msg{
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  
+  .chat_bottom {
+    display: flex;
+    min-width: 100%;
+    background-color: #1e1e1e;
+    border-radius: 2rem;
+    min-height: 50px;
+    padding: 0.5rem 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .chat_text {
+    color: white !important;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  width: 100%;
+  }
+  
+  .chat_input {
+    min-width: 90%;
+  }
+  
+  .chat_box {
+    min-width: fit-content;
+    max-width: 350px;
+    height: fit-content;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+    border-radius: 0.8rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin: 0.5rem;
+  }
+  
+  .chat_send_container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .send_btn {
+    color: #fbd208 !important;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+  }
+  
+  .send_btn:hover {
+    color: #b37003 !important;
+  }
+  
+  .send {
+    background-color: #fbd208;
+    color: black;
+    align-self: flex-end;
+    margin: 0.5rem;
+  }
+  
+  .chat_recieved_container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .recieved {
+    background-color: #efefef;
+    color: black;
+    margin: 0.5rem;
+    border-radius: 0.8rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding: 1rem;
+    max-width: 350px;
+  }
+  
+  /* width */
+.chat_msg::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Track */
+.chat_msg::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+.chat_msg::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+.chat_msg::-webkit-scrollbar-thumb:hover {
+  background: rgb(156, 156, 57); 
+}
+
+.icon_attach {
+  color: #fbd208 !important;
+}
+
+.icon_attach:hover {
+  color: #b37003 !important;
+}
+
+.attach_box{
+  display: flex;
+  justify-content: center;
+}
+
+.attach_popup{
+  min-width: 300px !important;
+  min-height: 180px !important;
+}
+
+.chatAttachment{
+  height: 120px;
+  width: 220px;
+  padding: 2px;
+  
+  margin: 5px;
+  border-radius: 5px;
+  
+}
+
+.sendImage{
+  background-color: #fbd208;
+}
+
+.recieveImage{
+  background-color: #efefef;
+}

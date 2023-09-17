@@ -1,0 +1,221 @@
+import React, { useEffect, useState } from 'react'
+import './ChatBox.css';
+import Box from '@mui/material/Box';
+import { Button, IconButton, Input, Typography } from '@mui/material';
+import SendIcon from '@mui/icons-material/Send';
+import axios from 'axios';
+import { useParams } from 'react-router-dom';
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import Slide from '@mui/material/Slide';
+import AttachmentIcon from '@mui/icons-material/Attachment';
+import CloseIcon from '@mui/icons-material/Close';
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
+
+const ChatBox = () => {
+
+  const [open, setOpen] = React.useState(false);
+  // const [iopen, setIOpen] = React.useState(false);
+  // const [image, setImage] = useState([]);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  // const handleClickIOpen = (e) => {
+  //   setImage(e)
+  //   setIOpen(true);
+  // };
+
+  const handleClose = () => {
+    // setIOpen(false);
+    
+    setOpen(false);
+
+  };
+
+  var uid = sessionStorage.getItem("uid");
+  const bid = useParams();
+  const [chat, setChat] = useState([]);
+  const [txtmsg, setTxtmsg] = useState([]);
+  console.log(sessionStorage.getItem("uid"));
+
+  const Transition = React.forwardRef(function Transition(props, ref) {
+    return <Slide direction="up" ref={ref} {...props} />;
+  });
+
+  const fetchChat = () => {
+    var dat = {
+      userid: sessionStorage.getItem("uid"),
+      builderid: bid,
+    }
+    console.log(bid.bid);
+
+    axios.get("http://localhost:4000/userbuilderchat/" + sessionStorage.getItem("uid") + "&" + bid.bid)
+      .then((response) => {
+        var data = response.data.Chat;
+        console.log(data);
+        setChat(data);
+      });
+  };
+
+  useEffect(() => {
+    fetchChat();
+  }, []);
+
+  const [attachment, setAttachment] = useState([]);
+
+  const userbuilderchat = () => {
+    var msg = {
+      chat: txtmsg,
+      bid: bid.bid,
+      uid: sessionStorage.getItem("uid"),
+    }
+    axios.post("http://localhost:4000/userbuilderchat/", msg).then((response) => {
+      fetchChat();
+      setTxtmsg("");
+      document.getElementById("chat_msg").animate({ scrollTop: document.getElementById("chat_msg")[0].scrollHeight });
+    })
+  }
+
+  const chatattachmentuserbuilder = () => {
+    let formData = new FormData();
+    formData.append("uid", sessionStorage.getItem("uid"));
+    formData.append("attachment", attachment);
+    formData.append("bid", bid.bid);
+    const config = {
+      headers: { "content-type": "multipart/form-data" },
+    };
+
+    axios.post("http://localhost:4000/chatattachmentuserbuilder/", formData, config).then((response) => {
+      alert(response.data.message);
+      fetchChat();
+      handleClose();
+    })
+  }
+console.log(open);
+  return (
+
+    <>
+      <Box className='chat_container'>
+        <Box className='chat_bottom'>
+          <Box className='chat_attach'>
+            <IconButton sx={{ paddingLeft: "0" }} onClick={handleClickOpen}>
+              <AddCircleOutlineIcon className='icon_attach' />
+            </IconButton>
+          </Box>
+          <Box className='chat_input'>
+            <input className='chat_text' value={txtmsg} onChange={(c) => setTxtmsg(c.target.value)} placeholder="Type Your Message Here" />
+          </Box>
+          <Box>
+            <Button className='send_btn' onClick={userbuilderchat}>
+              <SendIcon />
+            </Button>
+          </Box>
+        </Box>
+        <Box className="chat_msg">
+          {chat.map((chat) => (
+            <>
+              {chat.from_userid == uid && (
+                <Box className='chat_sendbox'>
+                  <Box className='chat_send_container'>
+                    {
+                      chat.chat_content == "" && (
+                        <img className='chatAttachment sendImage'  src={chat.chat_attachment} />
+                        // onClick={(e) => handleClickIOpen(chat.chat_attachment)}
+                      )
+                    }
+                    {
+                      chat.chat_content !== "" && (
+                        <Box className='chat_box send'>
+                          {chat.chat_content}
+                        </Box>
+                      )
+                    }
+                  </Box>
+                  <Box className='chattime_box'>
+                    <Typography className='chat_time'>{chat.chat_datetime}</Typography>
+                  </Box>
+                </Box>
+              )}
+              {chat.to_userid == uid && (
+                <Box className='chat_recievebox'>
+                  <Box className='chat_recieved_container'>
+                    {
+                      chat.chat_content == "" && (
+                        <img className='chatAttachment recieveImage'  src={chat.chat_attachment} />
+                        // onClick={(e) => handleClickIOpen(chat.chat_attachment)}
+                      )
+                    }
+                    {
+                      chat.chat_content !== "" && (
+                        <Box className='chat_box recieved'>
+                          {chat.chat_content}
+                        </Box>
+                      )
+                    }
+                  </Box>
+                  <Box className='chattime_box'>
+                    <Typography className='chat_time'>{chat.chat_datetime}</Typography>
+                  </Box>
+                </Box>
+              )}
+            </>
+          ))}
+        </Box>
+
+      </Box>
+      <Dialog
+        open={open}
+        TransitionComponent={Transition}
+        keepMounted
+        onClose={handleClose}
+        aria-describedby="alert-dialog-slide-description"
+        className='attach_popup'
+        // sx={{ minHeight: "180px", minWidth: "300px" }}
+      >
+        <DialogTitle>{"Attack File"}</DialogTitle>
+        <DialogContent className='attach_box'>
+          <Button variant="contained" component="label">
+            Upload
+            <input hidden accept="image/*" type="file" onChange={(e) => setAttachment(e.target.files[0])} />
+            <AttachmentIcon />
+          </Button>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose}>Cancel</Button>
+          <Button onClick={chatattachmentuserbuilder}>Send</Button>
+        </DialogActions>
+      </Dialog>
+      {/* IMage Box */}
+      {/* <Dialog
+        fullScreen
+        open={iopen}
+        onClose={handleClose}
+        TransitionComponent={Transition}
+      >
+        <IconButton
+          edge="start"
+          color="inherit"
+          onClick={handleClose}
+          aria-label="close"
+        >
+          <CloseIcon />
+        </IconButton>
+        <DialogContent className='attach_box'>
+          <img src={image} />
+        </DialogContent>
+      </Dialog> */}
+    </>
+
+  )
+}
+
+export default ChatBox

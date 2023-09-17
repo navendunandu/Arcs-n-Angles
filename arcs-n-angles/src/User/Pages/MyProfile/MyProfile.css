@@ -1,0 +1,52 @@
+.top_align{
+    justify-content: space-between !important;
+}
+
+.edit_btn{
+    color: black !important;
+    font-size: 18px !important;
+    transition: .3s !important;
+}
+
+.edit_btn:hover{
+    background-color: rgb(255 197 0 / 33%) !important;
+}
+
+.pbtn_icon{
+    font-size: inherit !important;
+}
+
+.profile_row{
+    display: flex;
+    padding: 1rem !important;
+    font-weight: 400 !important;
+}
+
+.section_profile{
+    font-size: 20px !important;    
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif !important;
+}
+
+.phead{
+    font-weight: bold !important;
+}
+
+.update_btn{
+    color: black !important;
+    font-size: 18px !important;
+    transition: .3s !important; 
+    background-color: rgb(255, 196, 0) !important;
+}
+
+.update_btn:hover{
+    background-color: rgb(188, 144, 0) !important;
+}
+
+.modal_form{
+    display: flex;
+    flex-direction: column;
+}
+
+.mb_1rem{
+    margin-bottom: 1rem !important;
+}

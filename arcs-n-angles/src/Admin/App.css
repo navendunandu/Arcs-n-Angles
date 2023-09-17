@@ -1,0 +1,109 @@
+.css-wied2b-MuiFormLabel-root-MuiInputLabel-root.Mui-focused{
+    color:#b9bbc0 !important;
+}
+
+.css-p51h6s-MuiInputBase-input-MuiOutlinedInput-input:focus{
+    outline:0;
+    border-color: white;
+}
+
+.css-p51h6s-MuiInputBase-input-MuiOutlinedInput-input:focus{outline:1 !important;
+border-style: solid !important;
+}
+
+.btn_delete{
+    background-color: rgb(222, 0, 0) !important;
+    color: #eaeaea !important;
+    transition: .3s !important;
+    text-transform: none  !important;
+}
+
+.btn_delete:hover{
+    background-color: rgb(133, 0, 0) !important;
+}
+
+.red{
+    transition: .3s !important;
+}
+
+.red:hover{
+    color:red;
+}
+
+.verified{
+    color:rgb(0, 182, 0);
+    transition: .3s !important;
+}
+
+.verified:hover{
+    color:rgb(0, 123, 0);
+}
+
+.notverify{
+    color:yellow;
+    transition: .3s !important;
+}
+
+.notverify:hover{
+    color:rgb(194, 194, 0);
+}
+
+.reject{
+    color:red;
+    transition: .3s !important;
+}
+
+.reject:hover{
+    color:rgb(166, 0, 0);
+}
+
+.btn_status{
+    transition: .3s !important;
+}
+
+.btn_status:hover{
+    background-color: #1d9e93 !important;
+}
+
+.status_icon{
+    color:whitesmoke;
+}
+
+.popUp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200;
+    background-color:rgb(10 13 22);
+    box-shadow: 24;
+    padding: 4rem;
+    gap: 1rem;
+}
+
+.popUp_button{
+    display: flex;
+    gap: 2rem;
+}
+
+.popUp_button>Button{
+    background-color: white;
+    color: black;
+}
+
+.popUp_button>Button:hover{
+    background-color: rgb(31 33 75);
+    color: white;
+}
+
+.popUp_image{
+    height:300px;
+}
+
+.tick {
+    background-color: #4caf50;
+    transition: background-color 0.5s ease-in-out;
+  }

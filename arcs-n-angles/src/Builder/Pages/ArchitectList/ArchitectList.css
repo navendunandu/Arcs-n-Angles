@@ -1,0 +1,42 @@
+
+
+.architectCard{
+    height: 100%;
+    box-shadow: 0px 0px 48px 0px rgba(4,6,4,0.08) !important;
+    border-radius: 5px;
+    overflow: hidden;
+    outline-width: 0px !important;
+}
+
+.architectCard .architectCard_title{
+    font-weight: 500;
+    font-size: 1.2rem !important;
+}
+
+/* .architectCard {
+    height: 350px;
+} */
+
+.architectCard_image{
+    height: 250px;
+    width: 250px;
+}
+
+.architectCard_caption{
+    color: gray !important;
+    font-weight: 400;
+    
+}
+
+.arch_details{
+    padding-bottom: .8rem;
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.arch_icons{
+    margin-right: 1rem;
+}

@@ -1,0 +1,27 @@
+
+
+.builderCard{
+    height: 100%;
+    box-shadow: 0px 0px 48px 0px rgba(4,6,4,0.08) !important;
+    border-radius: 5px;
+    overflow: hidden;
+    outline-width: 0px !important;
+}
+
+.builderCard .builderCard_title{
+    font-weight: 500;
+}
+
+/* .builderCard {
+    height: 350px;
+} */
+
+.builderCard_image{
+    height: 250px;
+}
+
+.builderCard_caption{
+    color: gray !important;
+    font-weight: 400;
+    
+}

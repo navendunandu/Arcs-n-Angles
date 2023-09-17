@@ -1,0 +1,27 @@
+
+
+.architectCard{
+    height: 100%;
+    box-shadow: 0px 0px 48px 0px rgba(4,6,4,0.08) !important;
+    border-radius: 5px;
+    overflow: hidden;
+    outline-width: 0px !important;
+}
+
+.architectCard .architectCard_title{
+    font-weight: 500;
+}
+
+/* .architectCard {
+    height: 350px;
+} */
+
+.architectCard_image{
+    height: 250px;
+}
+
+.architectCard_caption{
+    color: gray !important;
+    font-weight: 400;
+    
+}

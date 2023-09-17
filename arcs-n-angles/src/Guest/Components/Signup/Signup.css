@@ -1,0 +1,190 @@
+.reg-form{
+    display: flex;
+    height: 80vh;
+    margin-top: 10rem;
+    margin-bottom: 4rem;
+}
+
+.align-form {
+    display: flex;
+    gap: .5rem;
+}
+
+input::file-selector-button {
+  border-radius: 34px;
+  border: 1px solid var(--orange);
+  color: white;
+  font-size: 16px;
+  padding: 10px 26px 10px 26px;
+  background: linear-gradient(180deg, #fdc50f 26.71%, #fb982f 99.36%);
+  /* box-shadow: 0 5px 10px 0px rgb(251 161 0); */
+  transition: .3s;
+}
+
+input::file-selector-button:hover {
+  background: white;
+  cursor: pointer;
+  color: var(--orange);
+  border: 1px solid var(--orange);
+  box-shadow: none;
+}
+
+.r-right{
+    display: flex;
+    position: relative;
+    flex: 1;
+}
+
+.r-right> .form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: start;
+}
+
+.r-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.r-sub{
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.r-title{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.title-icon{
+  font-size: 36px !important;
+}
+
+.title-bar{
+  background: linear-gradient(180deg, #fdc50f 26.71%, #fb982f 99.36%);
+  box-shadow: 0 5px 10px 0px rgb(251 161 0);
+  color: white;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: baseline;
+  border-radius: 34px;
+  gap: 1rem;
+}
+
+.mtt_30{
+  margin-top: -100px;
+}
+
+.mtt_25{
+  margin-top: 25px;
+}
+
+.file{
+  display: flex;
+  flex-direction: column;
+}
+
+.file-upload{
+  display: flex;
+  flex-direction: row;
+}
+
+.upload-head{
+  color: grey;
+}
+
+.address{
+    padding: 0.3em;
+    outline: none;
+    border: 2px solid var(--orange);
+    border-radius: 8px;
+    font-size: 16px; 
+}
+
+.orange{
+    color: var(--orange);
+}
+
+.black{
+    color: black;
+}
+
+.r-right .reg-user{
+    width: 20rem;
+    padding: .3rem;
+    outline: none;
+    border: 2px solid var(--orange);
+    border-radius: 8px;
+    font-size: 16px;
+    height: 2.5rem;
+
+}
+
+.reg-add{
+    height: 6rem !important;
+}
+
+.r-blur{
+    top: 1rem;
+    left: 8rem;
+}
+
+.r-image{
+    flex:1;
+    position: relative;
+}
+
+.r-image>*{
+    position: absolute;
+    z-index: 1;
+}
+
+.r-image > :nth-child(1) {
+    transform: scale(0.69);
+    left: -15%;
+    top: -9%;
+  }
+  .r-image > :nth-child(2) {
+    top: -4.6rem;
+    transform: scale(0.67);
+    left: -3rem;
+  }
+  .r-image > :nth-child(3) {
+    transform: scale(1);
+    left: 14%;
+    bottom: 10%;
+  }
+
+  .place{
+    width: 20.8rem !important;
+    color: gray;
+    height: 2rem;
+  }
+
+  .others{
+    display: flex;
+    color: grey;
+    gap:1rem;
+    align-items: center;
+  }
+
+  .others>.gender{
+    gap: 1rem;
+  }
+
+  .gen-btn{
+    display: flex;
+    gap: .5rem;
+  }
+
+  .genname{
+    margin: 0;
+  }
+
+  /* .new-reg-btn{
+
+  } */
